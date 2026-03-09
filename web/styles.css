@@ -1,0 +1,21 @@
+:root { font-family: Inter, system-ui, Arial, sans-serif; }
+body { margin: 0; background: #f2f4f8; color: #1f2937; }
+header { background: #1a237e; color: #fff; padding: 16px; }
+main { max-width: 900px; margin: 0 auto; padding: 16px; }
+.card { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.tab-row { display: flex; gap: 10px; }
+button { border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; background: #3949ab; color: #fff; }
+button.active { background: #1a237e; }
+button.danger { background: #b91c1c; }
+.period-grid { display: grid; grid-template-columns: repeat(3, minmax(120px, 1fr)); gap: 12px; }
+.period-card { border-radius: 10px; color: #fff; padding: 16px; min-height: 100px; display:flex; flex-direction:column; justify-content:space-between; }
+.period-card.morning { background: linear-gradient(135deg, #ffb74d, #fb8c00); }
+.period-card.noon { background: linear-gradient(135deg, #4fc3f7, #039be5); }
+.period-card.night { background: linear-gradient(135deg, #3949ab, #1a237e); }
+.hidden { display: none; }
+.form-grid { display: grid; gap: 10px; }
+input { padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; }
+.medicine-item { border: 1px solid #e5e7eb; padding: 10px; border-radius: 8px; margin-bottom: 8px; display: flex; justify-content: space-between; gap: 8px; }
+.small { font-size: 12px; color: #6b7280; }
+.nav-row { display:flex; gap:8px; margin-top: 8px; }
+@media (max-width: 700px) { .period-grid { grid-template-columns: 1fr; } }

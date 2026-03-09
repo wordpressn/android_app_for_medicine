@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a237e" />
+  <title>MediReminder Web</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>MediReminder</h1>
+    <p>Parents + Son/Daughter medicine management (PWA)</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="tab-row">
+        <button id="parentTab" class="active">Parent View</button>
+        <button id="adminTab">Admin View</button>
+      </div>
+    </section>
+
+    <section id="parentSection" class="card">
+      <h2>Today's Periods</h2>
+      <div id="periods" class="period-grid"></div>
+      <div id="periodDetails" class="hidden"></div>
+    </section>
+
+    <section id="adminSection" class="card hidden">
+      <h2>Manage Medicines</h2>
+      <form id="medicineForm" class="form-grid">
+        <input required id="brandName" placeholder="Brand name" />
+        <input required id="genericName" placeholder="Generic name" />
+        <input required id="dose" placeholder="Dose (e.g., 1 tablet 500mg)" />
+        <input id="imageUrl" placeholder="Medicine image URL" />
+        <label>Start date <input required id="startDate" type="date" /></label>
+        <label>End date <input required id="endDate" type="date" /></label>
+        <fieldset>
+          <legend>Periods</legend>
+          <label><input type="checkbox" name="period" value="MORNING" checked /> Morning</label>
+          <label><input type="checkbox" name="period" value="NOON" /> Noon</label>
+          <label><input type="checkbox" name="period" value="NIGHT" /> Night</label>
+        </fieldset>
+        <button type="submit">Add Medicine</button>
+      </form>
+
+      <h3>Medicine List</h3>
+      <div id="medicineList"></div>
+    </section>
+  </main>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
